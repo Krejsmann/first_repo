@@ -1,0 +1,87 @@
+@use '../helpers' as *;
+
+.footer {
+  background-image: url(/images/footer/socials/decoration.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left bottom;
+  &__body{
+    padding-block: fluid(80,40);
+    height: auto;
+    border-bottom: 20px solid var(--color-white);
+  }
+  
+  &__menu{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    align-items: start;
+    column-gap: fluid(80,20);
+    @include tablet{
+      display:grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-areas: 
+      "first first first first"
+      "second second third third"
+      "fourth fourth fourth fourth";
+    }
+  &-column{
+    display:grid;
+    row-gap:fluid(16,16);
+    @include tablet{
+      margin-top: rem(50);
+      &:nth-child(1){
+        grid-area:first;
+        display: flex;
+        justify-content: center;
+        gap: rem(80);
+        @include mobile-s{
+          gap: 0;
+          justify-content: space-between;
+        }
+      }
+      &:nth-child(2){grid-area:second;}
+      &:nth-child(3){grid-area:third;}
+      &:nth-child(4){grid-area:fourth;}
+    }
+  }
+  &-main-link{
+    font-weight: 500;
+    font-size: rem(18);
+    color: var(--color-white);
+  }
+  &-list{
+    display: flex;
+    flex-direction: column;
+    row-gap: fluid(16,16);
+  }
+  &-item{
+    display:flex;
+    align-items: center;
+    font-size: rem(16);
+  }
+  &-item img{
+    margin-right: rem(7);
+    max-width: rem(18);
+    max-height: rem(18);
+  }
+  &-link{
+    color: var(--color-grey-1);
+  }
+
+}
+&-extra{
+  border-width: 0px;
+  border-top-width: 1px;
+  border-style: solid;
+  border-image: var(--color-linear) 1;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: rem(32);
+
+  &-text{
+    padding-top: fluid(32,32);
+    padding-bottom: fluid(47,40);
+  }
+}
+}

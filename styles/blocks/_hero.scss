@@ -1,0 +1,71 @@
+@use '../helpers' as *;
+
+.hero{
+  &__main{
+    display: grid;
+    grid-template-columns: 45% auto;
+    grid-template-areas: 
+    'body resourсes-preview'
+    'metrics resourсes-preview';
+  }
+  &__body{
+    grid-area: body;
+    padding-top: rem(90);
+    padding-right: rem(50);
+    padding-bottom: rem(42);
+  }
+  &__metrics{
+    grid-area: metrics;
+  }
+  &__resources-preview{
+    grid-area: resourсes-preview;
+    justify-self: center;
+  }
+  &__title{
+    padding-bottom: rem(12);
+    font-size: fluid(64,48);
+    font-weight: 600;
+  }
+  &__subtitle{
+    font-size: rem(16);
+    font-weight: 300;
+    color: var(--color-grey-2);
+    white-space: nowrap;
+
+  }
+  &__button{
+    text-transform: uppercase;
+    margin-top: rem(32);
+  }
+  &__photo{
+    max-width: 100%;
+    max-height: 100%;
+    display:block;
+  }
+  &__video{
+    display:flex;
+    background-color: #21232E;
+    min-width: rem(196);
+    max-height: rem(127);
+    align-items: center;
+    justify-content: center;
+    margin-left: rem(75);
+    &-photolink{
+      position:relative;
+    }
+    &-play{
+      display:flex;
+      align-items: center;
+      width: rem(28);
+      height: rem(28);
+      justify-content: center;
+      position: absolute;
+      top: 42%;
+      left: 51%;
+      transform: translate(-50%, -50%);
+      background: none;
+      border:rem(1) solid var(--color-white);
+      border-radius: 50%;
+    }
+  }
+}

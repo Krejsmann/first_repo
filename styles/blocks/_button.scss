@@ -1,0 +1,27 @@
+@use '../helpers' as *;
+
+.button{
+  display:inline-flex;
+  justify-content: center;
+  padding: rem(18) rem(38);
+  font-size: rem(14);
+  font-weight: 700;
+  color: var(--color-white);
+  white-space: nowrap;
+  border-width: 1px;
+  border-style: solid;
+  border-image: var(--color-linear) 1;
+  @include hover{
+    font-weight: 700;
+    background-color: #252532;
+  }
+
+  &--accent{
+    transition: all .3s;
+    background: var(--color-linear);
+    cursor: pointer;
+    @include hover{
+      transform: scale(1.05);
+    }
+  }
+}

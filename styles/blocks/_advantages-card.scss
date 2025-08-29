@@ -1,0 +1,23 @@
+@use '../helpers' as *;
+.hero__advantages{
+  background-color: #252532;
+  margin-bottom: rem(120);
+  display:grid;
+  grid-template-columns: (repeat(3,1fr));
+  &-photo{
+    padding-top: rem(47);
+    padding-bottom: rem(47);
+  }
+  &-title{
+    font-size: rem(20);
+    color: var(--color-white);
+  }
+  &-subtitle{
+    font-size: rem(14);
+    line-height: rem(28);
+    padding-bottom: rem(54);
+  }
+  &-column{
+    max-width: rem(324);
+  }
+}

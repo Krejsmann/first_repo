@@ -1,0 +1,23 @@
+@use '../helpers' as *;
+
+.team{
+
+  --personImageSize: #{rem(60)};
+  display: flex;
+  align-items: center;
+}
+.hero__team-subcribe{
+  margin-left: rem(15);
+}
+.hero__metrics-team__person{
+  width: var(--personImageSize);
+  border: rem(2) solid var(--color-black-100);
+  border-radius: rem(50);
+  &:not(:first-child){
+    margin-left: calc((var(--personImageSize) / 3.5 * -1));
+  }
+}
+.number-happy{
+  font-weight: 600;
+  color: var(--color-white);
+}

@@ -1,0 +1,21 @@
+@use 'helpers' as *;
+
+:root {
+  --color-white: #FFFF;
+  --color-black-100: #18181B;
+  --color-black-50: #252532;
+  --color-grey-1: #B0B0B2;
+  --color-grey-2: #D1D1D1;
+  --color-success: #00C566;
+  --color-error: #FF4747;
+  --color-warning: #FACC15;
+  --color-linear: linear-gradient(90deg,#0CBAF1,#E95CE9);
+  --color-purple: #CA6AEB;
+  --color-blue: #19B5F1;
+
+  --font-family-base: 'ChakraPetch', sans-serif;
+
+  --container-width: #{rem(1450)};
+  --container-padding-x: #{rem(16)};
+  --transition-duration: 0.2s;
+}

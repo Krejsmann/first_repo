@@ -1,0 +1,32 @@
+@use '../helpers' as *;
+
+.soc1als__list{
+  display: flex;
+  margin-top: rem(100);
+  gap: rem(20);
+  @include tablet{
+    margin-top: rem(0);
+  }
+  @include mobile{
+    gap: rem(10);
+  }
+  &-item-button{
+    background-color: var(--color-black-100);
+    display: flex;
+    height: rem(46);
+    width: rem(46);
+    align-items: center;
+    justify-content: center;
+    border: 1px solid transparent;
+    border-radius: 30px;
+    background:
+    linear-gradient(var(--color-black-100), var(--color-black-100)) padding-box,
+    var(--color-linear) border-box;
+    background-origin: padding-box, border-box;
+    background-clip: padding-box, border-box;
+    transition: all .5s;
+    &:hover{
+      transform: scale(1.1);
+  }
+}
+}

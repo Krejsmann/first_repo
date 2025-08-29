@@ -1,0 +1,107 @@
+@use 'helpers' as *;
+
+
+html{
+  &.is-lock{
+    overflow: hidden;
+  }
+}
+body{
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-family-base);
+  color: var(--color-grey-2);
+  background-color: var(--color-black-100);
+}
+main{
+  flex-grow: 1;
+}
+h1, .h1
+h2, .h2
+h3, .h3
+h4, .h4
+h5, .h5
+h6, .h6 {
+  color: var(--color-white);
+  font-weight: 600;
+}
+
+h1, .h1{
+  @include fluid-text(64, 48);
+  line-height: 1;
+}
+h1, .h1
+h2, .h2{
+  font-weight: 600;
+}
+h2, .h2{
+  @include fluid-text(48,32);
+  line-height: 0.58;
+}
+
+h3, .h3{
+  @include fluid-text(28, 28);
+  line-height: 1;
+}
+
+h4, .h4{
+  @include fluid-text(20,20);
+}
+
+h5, .h5{
+  @include fluid-text(16,16);
+  font-weight: 500;
+}
+
+a,
+button,
+label,
+input,
+textarea,
+select,
+svg * {
+  transition-duration: var(--transition-duration);
+}
+
+a{
+  color: var(--color-white);
+
+  @include hover {
+  color: var(--color-white);
+  font-weight: 500;
+  }
+
+  &[class]{
+    text-decoration: none;
+  }
+}
+
+:focus-visible{
+  outline: rem(2) dashed var(--color-white);
+  outline-offset: rem(4);
+  transition-duration: 0s !important;
+}
+
+a,
+button{
+  &[aria-label] {
+    position: relative;
+
+    &::before{
+      @include abs-center;
+      @include square(rem(44));
+    }
+  }
+}
+
+.nowrap{
+  white-space: nowrap;
+}
+@media (max-width: 390px) {
+  .footer__menu-logo {
+    display: none;
+  }
+  .soc1als__list-item{
+    margin-right: rem(10);
+  }
+}
