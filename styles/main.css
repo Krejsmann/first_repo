@@ -594,7 +594,7 @@ button[aria-label]::before {
 }
 
 .footer {
-  background-image: url(/images/footer/socials/decoration.svg);
+  background-image: url(../images/footer/socials/decoration.svg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: left bottom;
@@ -725,7 +725,7 @@ button[aria-label]::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url(/images/background/1.svg) no-repeat center bottom;
+  background: url(../images/background/1.svg) no-repeat center bottom;
   z-index: -1;
   filter: blur(3.75rem);
 }
